@@ -1,2 +1,2 @@
 # PhysIO-Live
-Here is where the PhysIO Matlab Livescript files live.
+Here is where the PhysIO Matlab Livescript demo lives.
