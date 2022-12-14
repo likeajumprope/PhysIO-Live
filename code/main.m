@@ -16,14 +16,14 @@
 %% Setup paths - #MOD# Modify to your own environment
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-dataID = 'forest'
+dataID = 'forest' % resting state does not work
 
 switch dataID
-case 'forest'
+case 'forest' 
     subjectId = 'sub-01'
     nSlices = 36; % nSlicesTotal/MB factor
     TR = 2.0; % seconds
-    nVolumes = 300;
+    nVolumes = 153;
 case 'resting_state'
     subjectId = 'sub-01/ses-1';
     nSlices = 70; % nSlicesTotal/MB factor
@@ -102,7 +102,8 @@ if isInteractive, input('Press Enter to continue'); end
 % loads matlabbatch and adapts subject-specific data
 clear matlabbatch
 
-fileJobPhysio = 'physio_spm_job.m';
+%fileJobPhysio = 'physio_spm_job.m';
+fileJobPhysio = 'physio_batch_job.m';
 clear matlabbatch
 run(fileJobPhysio)
 matlabbatch{1}.spm.tools.physio.scan_timing.sqpar.Nscans = nVolumes;
