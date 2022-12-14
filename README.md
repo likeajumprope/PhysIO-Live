@@ -1,5 +1,5 @@
 # PhysIO-Live
-Here is where the PhysIO Matlab Livescript demo lives.
+Here is where the futire PhysIO Matlab Livescript demo lives.
 
 ## How to work with this repository
 1. Clone this repository.
