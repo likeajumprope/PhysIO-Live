@@ -34,7 +34,7 @@ end
 if hasStruct
     fileStructural = 'nifti/mstruct.nii';
 else
-    fileStructural = 'nifti/mmeanfmri.nii';
+    fileStructural = 'meansub-01_ses-auditoryperception_func_sub-01_ses-auditoryperception_task-auditoryperception_run-01_bold';
 end
 
 if doSmooth
