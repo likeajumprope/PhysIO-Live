@@ -1,1 +1,8 @@
 # List of untracked files to ignore
+MATLAB.prj
+.DS_Store
+.gitignore
+data*
+physio_spm_job.m # Lars
+preproc_spm_job.m # Lars
+no_track
