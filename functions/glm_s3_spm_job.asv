@@ -3,7 +3,7 @@
 % spm SPM - SPM12 (7771)
 % cfg_basicio BasicIO - Unknown
 %-----------------------------------------------------------------------
-matlabbatch{1}.spm.stats.fmri_spec.dir = {'glm_s3'};
+matlabbatch{1}.spm.stats.fmri_spec.dir = {'sub-01'};
 matlabbatch{1}.spm.stats.fmri_spec.timing.units = 'secs';
 matlabbatch{1}.spm.stats.fmri_spec.timing.RT = 2;
 matlabbatch{1}.spm.stats.fmri_spec.timing.fmri_t = 31;
@@ -163,6 +163,8 @@ matlabbatch{1}.spm.stats.fmri_spec.sess.scans = {
                                                  'rsub-01_ses-auditoryperception_func_sub-01_ses-auditoryperception_task-auditoryperception_run-01_bold.nii,151'
                                                  'rsub-01_ses-auditoryperception_func_sub-01_ses-auditoryperception_task-auditoryperception_run-01_bold.nii,152'
                                                  'rsub-01_ses-auditoryperception_func_sub-01_ses-auditoryperception_task-auditoryperception_run-01_bold.nii,153'
+        
+                                                
                                                  };
 %%
 matlabbatch{1}.spm.stats.fmri_spec.sess.cond = struct('name', {}, 'onset', {}, 'duration', {}, 'tmod', {}, 'pmod', {}, 'orth', {});

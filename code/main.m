@@ -139,9 +139,9 @@ if isInteractive, input('Press Enter to continue'); end
 
 
 if doSmooth
-    fileJobGlm = 'glm_s3_spm_job.m';
+    fileJobGlm = 'glm_s3_spm_smooth_job.m';
 else
-    fileJobGlm = 'glm_spm_job.m';
+    fileJobGlm = 'glm_spm_job.m'; % does not work yet
 end
 clear matlabbatch
 run(fileJobGlm)
