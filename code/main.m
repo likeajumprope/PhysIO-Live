@@ -16,8 +16,23 @@
 %% Setup paths - #MOD# Modify to your own environment
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-subjectId = 'sub-01';
-sessionId = "ses-1"
+dataID = 'forest'
+
+switch dataID
+case 'forest'
+    subjectId = 'sub-01'
+    nSlices = 70; % nSlicesTotal/MB factor
+    TR = 3.0; % seconds
+    nVolumes = 300;
+case 'resting_state'
+    subjectId = 'sub-01/ses-1';
+    nSlices = 70; % nSlicesTotal/MB factor
+    TR = 3.0; % seconds
+    nVolumes = 300;
+end
+
+
+
  % if true, only the SPM batch jobs are loaded, but you have to run them manually in the batch editor (play button)
 isInteractive = true;
 hasStruct = false; % if false, uses (bias-corrected) mean of fmri.nii for visualizations
@@ -27,19 +42,9 @@ doSmooth = true;
 pathProject     = '/Users/jobayer/Documents/MATLAB/PhysIO-Live';
 pathCode        = fullfile(pathProject, 'code');
 pathResults     = fullfile(pathProject, 'results');
-pathSubject     = fullfile(pathProject,'data', subjectId, sessionId);
+pathSubject     = fullfile(pathProject,'data', dataID, subjectId);
 
 
-switch subjectId
-    case 'sub-01'
-        nSlices = 70; % nSlicesTotal/MB factor
-        TR = 3.0; % seconds
-        nVolumes = 300;
-    case 'sub-02'
-        nSlices = 70; % nSlicesTotal/MB factor
-        TR = 3.0; % seconds
-        nVolumes = 300;
-end
 
 addpath(genpath(pathCode));
 pathNow = pwd;
