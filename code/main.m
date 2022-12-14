@@ -21,8 +21,8 @@ dataID = 'forest'
 switch dataID
 case 'forest'
     subjectId = 'sub-01'
-    nSlices = 70; % nSlicesTotal/MB factor
-    TR = 3.0; % seconds
+    nSlices = 36; % nSlicesTotal/MB factor
+    TR = 2.0; % seconds
     nVolumes = 300;
 case 'resting_state'
     subjectId = 'sub-01/ses-1';
