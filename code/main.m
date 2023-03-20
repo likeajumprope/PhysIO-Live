@@ -35,7 +35,7 @@ end
 
  % if true, only the SPM batch jobs are loaded, but you have to run them manually in the batch editor (play button)
 isInteractive = true;
-hasStruct = false; % if false, uses (bias-corrected) mean of fmri.nii for visualizations
+hasStruct = true; % if false, uses (bias-corrected) mean of fmri.nii for visualizations
 doSmooth = true;
 
 
