@@ -5,8 +5,8 @@
 %-----------------------------------------------------------------------
 matlabbatch{1}.spm.tools.physio.save_dir = {''};
 matlabbatch{1}.spm.tools.physio.log_files.vendor = 'BIDS';
-matlabbatch{1}.spm.tools.physio.log_files.cardiac = {'/Users/jobayer/Documents/MATLAB/PhysIO-Live/data/forest/sub-01/sub-01_ses-auditoryperception_func_sub-01_ses-auditoryperception_task-auditoryperception_run-01_physio.tsv.gz'};
-matlabbatch{1}.spm.tools.physio.log_files.respiration = {'/Users/jobayer/Documents/MATLAB/PhysIO-Live/data/forest/sub-01/sub-01_ses-auditoryperception_func_sub-01_ses-auditoryperception_task-auditoryperception_run-01_physio.tsv.gz'};
+matlabbatch{1}.spm.tools.physio.log_files.cardiac = {'/Users/jobayer/Documents/MATLAB/PhysIO-Live/data/forest/sub-01/sub-01_ses-auditoryperception_func_sub-01_ses-auditoryperception_task-auditoryperception_run-01_physio.tsv'};
+matlabbatch{1}.spm.tools.physio.log_files.respiration = {'/Users/jobayer/Documents/MATLAB/PhysIO-Live/data/forest/sub-01/sub-01_ses-auditoryperception_func_sub-01_ses-auditoryperception_task-auditoryperception_run-01_physio.tsv'};
 matlabbatch{1}.spm.tools.physio.log_files.scan_timing = {''};
 matlabbatch{1}.spm.tools.physio.log_files.sampling_interval = 0.002;
 matlabbatch{1}.spm.tools.physio.log_files.relative_start_acquisition = 0;
