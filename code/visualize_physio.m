@@ -18,7 +18,7 @@
 doVisualizeFmri4D = false;
 
 if doVisualizeFmri4D
-    spm_check_registration('nifti/fmri.nii')
+    spm_check_registration('nifti/bold.nii')
 
     % compute time series minus mean (bit of a hack...)
     % {1} means specify 4D data as matrix X (instead of i1, i2 etc.)
@@ -34,7 +34,7 @@ end
 if hasStruct
     fileStructural = 'nifti/mstruct.nii';
 else
-    fileStructural = 'meansub-01_ses-auditoryperception_func_sub-01_ses-auditoryperception_task-auditoryperception_run-01_bold';
+    fileStructural = 'nifti/mmeanbold.nii';
 end
 
 if doSmooth
@@ -55,7 +55,7 @@ args = tapas_physio_report_contrasts(...
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-doComputeTsnrGains = false;
+doComputeTsnrGains = true;
 
 if doComputeTsnrGains
     indexContrastForSnrRatio = 0; % 0 = vs no noise modelin, 7 = vs motion

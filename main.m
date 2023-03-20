@@ -16,33 +16,22 @@
 %% Setup paths - #MOD# Modify to your own environment
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-dataID = 'forest' % resting state does not work
-
-switch dataID
-case 'forest' 
-    subjectId = 'sub-01'
-    nSlices = 36; % nSlicesTotal/MB factor
-    TR = 2.0; % seconds
-    nVolumes = 153;
-case 'resting_state'
-    subjectId = 'sub-01/ses-1';
-    nSlices = 70; % nSlicesTotal/MB factor
-    TR = 3.0; % seconds
-    nVolumes = 300;
-end
-
+subjectId = 'sub-01' % subject ID
+nSlices = 36; % nSlicesTotal/MB factor
+TR = 2.0; % seconds
+nVolumes = 153; % number of volumes
 
 
  % if true, only the SPM batch jobs are loaded, but you have to run them manually in the batch editor (play button)
 isInteractive = true;
-hasStruct = true; % if false, uses (bias-corrected) mean of fmri.nii for visualizations
+hasStruct = false; % if false, uses (bias-corrected) mean of fmri.nii for visualizations
 doSmooth = true;
 
 
-pathProject     = '/Users/jobayer/Documents/MATLAB/PhysIO-Live';
+pathProject     = '/Users/jobayer/Documents/MATLAB/Physio_3';
 pathCode        = fullfile(pathProject, 'code');
 pathResults     = fullfile(pathProject, 'results');
-pathSubject     = fullfile(pathProject,'data', dataID, subjectId);
+pathSubject     = fullfile(pathProject, 'results', subjectId);
 
 
 
@@ -87,7 +76,7 @@ end
 clear matlabbatch
 run(fileJobPreproc)
 matlabbatch{1}.spm.spatial.realign.estwrite.data{1} = ...
-    cellstr(spm_select('ExtFPList', 'nifti', '^fmri.*', 1:nVolumes));
+    cellstr(spm_select('ExtFPList', 'nifti', '^bold.*', 1:nVolumes));
 
 spm_jobman(jobMode, matlabbatch)
 
@@ -111,22 +100,6 @@ matlabbatch{1}.spm.tools.physio.scan_timing.sqpar.Nslices = nSlices;
 matlabbatch{1}.spm.tools.physio.scan_timing.sqpar.TR = TR;
 matlabbatch{1}.spm.tools.physio.scan_timing.sqpar.onset_slice = nSlices/2;
 
-switch subjectId
-    case 'sub-01'
-        % defaults OK in file
-    case 'sub-02'
-        matlabbatch{1}.spm.tools.physio.log_files.align_scan = 'first';
-        % only 150 volumes, we don't want to reduce degrees of freedom too much
-        matlabbatch{1}.spm.tools.physio.model.movement.yes.censoring_threshold = 2;
-
-        % too noisy cardiac data, has to be bandpass-filtered (default
-        % values)
-        matlabbatch{1}.spm.tools.physio.preproc.cardiac.filter = rmfield(...
-            matlabbatch{1}.spm.tools.physio.preproc.cardiac.filter, 'no');
-        matlabbatch{1}.spm.tools.physio.preproc.cardiac.filter.yes.type = 'cheby2';
-        matlabbatch{1}.spm.tools.physio.preproc.cardiac.filter.yes.passband = [0.3 9];
-        matlabbatch{1}.spm.tools.physio.preproc.cardiac.filter.yes.stopband = [];
-end
 
 spm_jobman(jobMode, matlabbatch)
 
@@ -148,7 +121,7 @@ run(fileJobGlm)
 
 if doSmooth
     matlabbatch{1}.spm.stats.fmri_spec.sess.scans = ...
-        cellstr(spm_select('ExtFPList', 'nifti', '^srfmri.*', 1:nVolumes));
+        cellstr(spm_select('ExtFPList', 'nifti', '^srbold.*', 1:nVolumes));
 else
     matlabbatch{1}.spm.stats.fmri_spec.sess.scans = ...
         cellstr(spm_select('ExtFPList', 'nifti', '^rfmri.*', 1:nVolumes));
