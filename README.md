@@ -16,6 +16,3 @@ Currently we have:
    For this live demo, we use he [Forrest Gump](https://openneuro.org/datasets/ds000113/versions/1.3.0) data set. Here we use the audio perception sub data set (see also [here](https://www.studyforrest.org/data.html))
 4. adapt the file paths in code/main.m, functions/preproc_minimal_no_struct_spm_job.m, functions/physio_batch_job.m and functions/glm_s3_spm_smooth_job.m
 5. run main.m (beta)
-
-
-   
