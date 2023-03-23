@@ -18,7 +18,7 @@ Currently we have:
    The following files need to be downlaoded into the sub-01 folder:
    - sub-01_ses-auditoryperception_task-auditoryperception_run-01_bold.nii.gz
    - sub-01_ses-forrestgump_T1w.nii.gz
-   -sub-01_ses-auditoryperception_func_sub-01_ses-auditoryperception_task-auditoryperception_run-01_physio.tsv
+   - sub-01_ses-auditoryperception_func_sub-01_ses-auditoryperception_task-auditoryperception_run-01_physio.tsv
    - recording-cardresp_physio.json
  
 4. Adapt the environment variables  in main.m
