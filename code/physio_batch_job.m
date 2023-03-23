@@ -5,17 +5,17 @@
 %-----------------------------------------------------------------------
 matlabbatch{1}.spm.tools.physio.save_dir = {'phyio_out'};
 matlabbatch{1}.spm.tools.physio.log_files.vendor = 'BIDS';
-matlabbatch{1}.spm.tools.physio.log_files.cardiac = {'/Users/jobayer/Documents/MATLAB/Physio_3/results/sub-01/sub-01_ses-auditoryperception_func_sub-01_ses-auditoryperception_task-auditoryperception_run-01_physio.tsv'};
-matlabbatch{1}.spm.tools.physio.log_files.respiration = {'/Users/jobayer/Documents/MATLAB/Physio_3/results/sub-01/sub-01_ses-auditoryperception_func_sub-01_ses-auditoryperception_task-auditoryperception_run-01_physio.tsv'};
+matlabbatch{1}.spm.tools.physio.log_files.cardiac = {fullfile(pathSubject,'/sub-01_ses-auditoryperception_func_sub-01_ses-auditoryperception_task-auditoryperception_run-01_physio.tsv')};
+matlabbatch{1}.spm.tools.physio.log_files.respiration = {fullfile(pathSubject,'/sub-01_ses-auditoryperception_func_sub-01_ses-auditoryperception_task-auditoryperception_run-01_physio.tsv')};
 matlabbatch{1}.spm.tools.physio.log_files.scan_timing = {''};
-matlabbatch{1}.spm.tools.physio.log_files.sampling_interval = 0.01;
+matlabbatch{1}.spm.tools.physio.log_files.sampling_interval = sampling_interval;
 matlabbatch{1}.spm.tools.physio.log_files.relative_start_acquisition = 0;
 matlabbatch{1}.spm.tools.physio.log_files.align_scan = 'last';
-matlabbatch{1}.spm.tools.physio.scan_timing.sqpar.Nslices = 36;
+matlabbatch{1}.spm.tools.physio.scan_timing.sqpar.Nslices = nSlices;
 matlabbatch{1}.spm.tools.physio.scan_timing.sqpar.NslicesPerBeat = [];
-matlabbatch{1}.spm.tools.physio.scan_timing.sqpar.TR = 2;
+matlabbatch{1}.spm.tools.physio.scan_timing.sqpar.TR = TR;
 matlabbatch{1}.spm.tools.physio.scan_timing.sqpar.Ndummies = 0;
-matlabbatch{1}.spm.tools.physio.scan_timing.sqpar.Nscans = 153;
+matlabbatch{1}.spm.tools.physio.scan_timing.sqpar.Nscans = nVolumes;
 matlabbatch{1}.spm.tools.physio.scan_timing.sqpar.onset_slice = 12;
 matlabbatch{1}.spm.tools.physio.scan_timing.sqpar.time_slice_to_slice = [];
 matlabbatch{1}.spm.tools.physio.scan_timing.sqpar.Nprep = [];
