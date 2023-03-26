@@ -51,7 +51,7 @@ mkdir('glm_s3')
 mkdir('physio_out')
 
 copyfile bold.nii nifti/bold.nii
-copyfile T1w.mii nifit/T1w.nii
+copyfile T1w.nii nifit/T1w.nii
 
 % add SPM path
 addpath(genpath(pathSPM))
