@@ -32,7 +32,7 @@ doSmooth = false;
 pathSPM = '/Users/jobayer/Documents/MATLAB/spm12'
 
 %specify your project
-pathProject     = '/Users/jobayer/Documents/MATLAB/PhysIO_Live';
+pathProject     = '/Users/jobayer/Documents/Github/PhysIO_Live';
 pathCode        = fullfile(pathProject, 'code');
 pathResults     = fullfile(pathProject, 'results');
 pathSubject     = fullfile(pathProject, 'results', subjectId);
@@ -50,8 +50,8 @@ mkdir('nifti')
 mkdir('glm_s3')
 mkdir('physio_out')
 
-copyfile bold.nii nifti/bold.nii
-copyfile T1w.nii nifit/T1w.nii
+copyfile sub-01_ses-auditoryperception_func_sub-01_ses-auditoryperception_task-auditoryperception_run-01_bold.nii nifti/bold.nii
+copyfile sub-01_ses-forrestgump_anat_sub-01_ses-forrestgump_T1w.nii nifit/T1w.nii
 
 % add SPM path
 addpath(genpath(pathSPM))
