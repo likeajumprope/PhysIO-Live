@@ -32,7 +32,7 @@ doSmooth = false;
 pathSPM = '/Users/jobayer/Documents/MATLAB/spm12'
 
 %specify your project
-pathProject     = '/Users/jobayer/Documents/MATLAB/Physio_3';
+pathProject     = '/Users/jobayer/Documents/MATLAB/PhysIO_Live';
 pathCode        = fullfile(pathProject, 'code');
 pathResults     = fullfile(pathProject, 'results');
 pathSubject     = fullfile(pathProject, 'results', subjectId);
