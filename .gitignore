@@ -14,3 +14,5 @@ glm
 glm_s3
 nifti
 physio_out
+*.asv
+*.ps
