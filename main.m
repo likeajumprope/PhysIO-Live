@@ -1,17 +1,13 @@
-% Script physio_live_main
+% Script main
 % Main preproc/analysis script lernit to create PhysIO regressors and
 % assess them via a nuisance-only GLM
 %
-%  physio_live_main
+%  main
 %
-%
-%   See also
- 
-% Author:   Johanna Bayer, Lars Kasper
+% Author:   Johanna Bayer
 % Created:  2023-04-01
 % Copyright (C) 2023
- 
- 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Setup paths - #MOD# Modify to your own environment
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
