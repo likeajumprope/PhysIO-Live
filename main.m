@@ -7,9 +7,9 @@
 %
 %   See also
  
-% Author:   Lars Kasper, Johanna Bayer
-% Created:  2022-12-13
-% Copyright (C) 2022
+% Author:   Johanna Bayer, Lars Kasper
+% Created:  2023-04-01
+% Copyright (C) 2023
  
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -25,14 +25,14 @@ sampling_interval = 0.01 % sampling interval
 
 % if true, only the SPM batch jobs are loaded, but you have to run them manually in the batch editor (play button)
 isInteractive = true;
-hasStruct = true; % if false, uses (bias-corrected) mean of fmri.nii for visualizations
+hasStruct = false; % if false, uses (bias-corrected) mean of fmri.nii for visualizations
 doSmooth = false;
 
 % specify the path to your SPM installtion
 pathSPM = '/Users/jobayer/Documents/MATLAB/spm12'
 
 %specify your project
-pathProject     = '/Users/jobayer/Documents/Github/PhysIO_Live';
+pathProject     = '/Users/jobayer/Dropbox/My Mac (170529-G-APD-PV)/Documents/GitHub/PhysIO-Live/';
 pathCode        = fullfile(pathProject, 'code');
 pathResults     = fullfile(pathProject, 'results');
 pathSubject     = fullfile(pathProject, 'results', subjectId);
@@ -51,10 +51,11 @@ mkdir('glm_s3')
 mkdir('physio_out')
 
 copyfile sub-01_ses-auditoryperception_func_sub-01_ses-auditoryperception_task-auditoryperception_run-01_bold.nii nifti/bold.nii
-copyfile sub-01_ses-forrestgump_anat_sub-01_ses-forrestgump_T1w.nii nifit/T1w.nii
+copyfile sub-01_ses-forrestgump_anat_sub-01_ses-forrestgump_T1w.nii nifti/T1w.nii
 
 % add SPM path
 addpath(genpath(pathSPM))
+addpath(genpath(fullfile(pathSPM, '/matlabbatch')))
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Setup SPM Batch editor
@@ -101,6 +102,9 @@ fileJobPhysio = 'physio_batch_job.m';
 
 clear matlabbatch
 run(fileJobPhysio)
+
+% potential debuggers: add matlabbatch 
+
 
 spm_jobman(jobMode, matlabbatch)
 
