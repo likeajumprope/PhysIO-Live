@@ -3,7 +3,7 @@
 % spm SPM - SPM12 (7771)
 % cfg_basicio BasicIO - Unknown
 %-----------------------------------------------------------------------
-matlabbatch{1}.spm.tools.physio.save_dir = {'phyio_out'};
+matlabbatch{1}.spm.tools.physio.save_dir = {'physio_out'};
 matlabbatch{1}.spm.tools.physio.log_files.vendor = 'BIDS';
 matlabbatch{1}.spm.tools.physio.log_files.cardiac = {fullfile(pathSubject,'/sub-01_ses-auditoryperception_func_sub-01_ses-auditoryperception_task-auditoryperception_run-01_physio.tsv')};
 matlabbatch{1}.spm.tools.physio.log_files.respiration = {fullfile(pathSubject,'/sub-01_ses-auditoryperception_func_sub-01_ses-auditoryperception_task-auditoryperception_run-01_physio.tsv')};
