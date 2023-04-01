@@ -21,3 +21,4 @@ Here is where the future PhysIO Matlab Livescript demo lives.
 
 - Make sure every step is run out of the results/>subjectID<  folder!
 - Make sure tapas, spm/matlabbatch are on the path. Any "cannot find/open file" error is usually due to the relevant folder not being  on the path.
+- Some operations take some time. A wheel of doom when hovering over the batch editor indicates that the process is still running!
