@@ -4,7 +4,7 @@
 %
 %  main
 %
-% Author:   Johanna Bayer
+% Author:   Johanna Bayer, adapted from cubric_physio by Lars Kasper
 % Created:  2023-04-01
 % Copyright (C) 2023
 
@@ -114,7 +114,7 @@ if isInteractive, input('Press Enter to continue'); end
 if doSmooth
     fileJobGlm = 'glm_s3_spm_smooth_job.m'; % generic paths
 else
-    fileJobGlm = 'glm_spm_job.m'; % does not work yet
+    fileJobGlm = 'glm_spm_job.m'; % geberic paths
 end
 clear matlabbatch
 run(fileJobGlm)
