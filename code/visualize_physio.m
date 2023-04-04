@@ -7,8 +7,8 @@
 %
 %   See also
 
-% Author:   Lars Kasper
-% Created:  2022-11-20
+% Author:   Johanna Bayer, Lars Kasper
+% Created:  2023-11-24
 % Copyright (C) 2022
 
 
@@ -20,10 +20,6 @@ doVisualizeFmri4D = false;
 if doVisualizeFmri4D
     spm_check_registration('nifti/bold.nii')
 
-    % compute time series minus mean (bit of a hack...)
-    % {1} means specify 4D data as matrix X (instead of i1, i2 etc.)
-    %     spm_imcalc('nifti/fmri.nii', 'nifti/dfmri.nii', ...
-    %         'bsxfun(@minus, X, mean(X))', {1})
 end
 
 
