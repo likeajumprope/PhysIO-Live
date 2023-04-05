@@ -4,7 +4,7 @@ Here is where the future PhysIO Matlab Livescript demo lives.
 ## How to work with this repository
 1. Clone this repository.
 
-## Run amended toolbox files on example data (Beta)
+## Run amended toolbox files on example data
 2. Install [PhysIO](https://github.com/translationalneuromodeling/tapas/tree/master/PhysIO). You might have to install [SPM](https://www.fil.ion.ucl.ac.uk/spm/).
    
 3. Get the data. 
