@@ -12,11 +12,11 @@
 %% Setup paths - #MOD# Modify to your own environment
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-subjectId = 'sub-01' % subject ID
+subjectId = 'sub-01'; % subject ID
 nSlices = 36; % nSlicesTotal/MB factor
 TR = 2.0; % seconds
 nVolumes = 153; % number of volumes
-sampling_interval = 0.01 % sampling interval
+sampling_interval = 0.01; % sampling interval
 
 
 % if true, only the SPM batch jobs are loaded, but you have to run them manually in the batch editor (play button)
@@ -25,7 +25,7 @@ hasStruct = false; % if false, uses (bias-corrected) mean of fmri.nii for visual
 doSmooth = false;
 
 % specify the path to your SPM installtion
-pathSPM = '/Users/jobayer/Documents/MATLAB/spm12'
+pathSPM = '/Users/jobayer/Documents/MATLAB/spm12';
 
 %specify your project
 pathProject     = '/Users/jobayer/Dropbox/My Mac (170529-G-APD-PV)/Documents/GitHub/PhysIO-Live/';
