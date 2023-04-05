@@ -4,7 +4,7 @@
 %
 %  main
 %
-% Author:   Johanna Bayer, adapted from cubric_physio by Lars Kasper
+% Author:   Johanna Bayer, supervised by Lars Kasper
 % Created:  2023-04-01
 % Copyright (C) 2023
 
