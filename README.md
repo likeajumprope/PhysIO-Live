@@ -17,7 +17,7 @@ Here is where the future PhysIO Matlab Livescript demo lives.
  
 4. Adapt the environment variables  in main.m
 
-## Debugging
+## Debugging - common issues
 
 - Make sure every step is run out of the results/>subjectID<  folder!
 - Make sure tapas, spm/matlabbatch are on the path. Any "cannot find/open file" error is usually due to the relevant folder not being  on the path.
