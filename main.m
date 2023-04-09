@@ -22,7 +22,7 @@ sampling_interval = 0.01; % sampling interval
 % if true, only the SPM batch jobs are loaded, but you have to run them manually in the batch editor (play button)
 isInteractive = true;
 hasStruct = false; % if false, uses (bias-corrected) mean of fmri.nii for visualizations
-doSmooth = false;
+doSmooth = true;
 
 % specify the path to your SPM installtion
 pathSPM = '/Users/jobayer/Documents/MATLAB/spm12';
@@ -71,9 +71,9 @@ end
 %% Spatial Preproc
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 if hasStruct
-    fileJobPreproc = 'preproc_minimal_spm_job.m'; % generic path
+    fileJobPreproc = 'preproc_minimal_spm_job.m'; % minimal preprocessing
 else
-    fileJobPreproc = 'preproc_minimal_no_struct_spm_job.m'; % generic path
+    fileJobPreproc = 'preproc_minimal_no_struct_spm_job.m'; % use bias corrected mean of fmri.nii for viz
 end
 
 % loads matlabbatch and adapts subject-specific data
@@ -112,9 +112,9 @@ if isInteractive, input('Press Enter to continue'); end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 if doSmooth
-    fileJobGlm = 'glm_s3_spm_smooth_job.m'; % generic paths
+    fileJobGlm = 'glm_s3_spm_smooth_job.m'; % smoothed images
 else
-    fileJobGlm = 'glm_spm_job.m'; % geberic paths
+    fileJobGlm = 'glm_spm_job.m'; % 
 end
 clear matlabbatch
 run(fileJobGlm)
