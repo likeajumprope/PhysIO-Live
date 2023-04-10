@@ -2,9 +2,16 @@
 Here is where the future PhysIO Matlab Livescript demo lives.
 
 ## How to work with this repository
+
+There are two ways to work with this repository:
+
+
+- [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=likeajumprope/PhysIO-Live)
+
+- Run locally on your machine
+
 1. Clone this repository.
 
-## Run amended toolbox files on example data
 2. Install [PhysIO](https://github.com/translationalneuromodeling/tapas/tree/master/PhysIO). You might have to install [SPM](https://www.fil.ion.ucl.ac.uk/spm/).
    
 3. Get the data. 
