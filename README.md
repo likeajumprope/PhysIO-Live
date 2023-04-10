@@ -3,14 +3,14 @@ Here is where the future PhysIO Matlab Livescript demo lives.
 
 ## How to work with this repository
 
-There are two ways to work with this repository:
+### There are two ways to work with this repository:
 
 
 - [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=likeajumprope/PhysIO-Live)
 
 - Run locally on your machine
 
-For the second option, follow the steps below:
+### For the second option, follow the steps below:
 
 1. Clone this repository.
 
