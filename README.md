@@ -10,6 +10,8 @@ There are two ways to work with this repository:
 
 - Run locally on your machine
 
+For the second option, follow the steps below:
+
 1. Clone this repository.
 
 2. Install [PhysIO](https://github.com/translationalneuromodeling/tapas/tree/master/PhysIO). You might have to install [SPM](https://www.fil.ion.ucl.ac.uk/spm/).
