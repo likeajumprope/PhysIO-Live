@@ -1,0 +1,6 @@
+[submodule "libs/spm"]
+	path = libs/spm
+	url = https://github.com/spm/spm
+[submodule "libs/tapas"]
+	path = libs/tapas
+	url = https://github.com/translationalneuromodeling/tapas.git
