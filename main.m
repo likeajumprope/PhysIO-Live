@@ -1,43 +1,41 @@
-% Script physio_live_main
+% Script main
 % Main preproc/analysis script lernit to create PhysIO regressors and
 % assess them via a nuisance-only GLM
 %
-%  physio_live_main
+%  main
 %
-%
-%   See also
- 
-% Author:   Lars Kasper, Johanna Bayer
-% Created:  2022-12-13
-% Copyright (C) 2022
- 
- 
+% Author:   Johanna Bayer, supervised by Lars Kasper
+% Created:  2023-04-01
+% Copyright (C) 2023
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Setup paths - #MOD# Modify to your own environment
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-subjectId = 'sub-01' % subject ID
+subjectId = 'sub-01'; % subject ID
 nSlices = 36; % nSlicesTotal/MB factor
 TR = 2.0; % seconds
 nVolumes = 153; % number of volumes
+sampling_interval = 0.01; % sampling interval
 
 
- % if true, only the SPM batch jobs are loaded, but you have to run them manually in the batch editor (play button)
+% if true, only the SPM batch jobs are loaded, but you have to run them manually in the batch editor (play button)
 isInteractive = true;
 hasStruct = false; % if false, uses (bias-corrected) mean of fmri.nii for visualizations
 doSmooth = true;
 
+% specify the path to your SPM installtion
+pathSPM = '/Users/jobayer/Documents/MATLAB/spm12';
 
-pathProject     = '/Users/jobayer/Documents/MATLAB/Physio_3';
+%specify your project
+pathProject     = '/Users/jobayer/Dropbox/My Mac (170529-G-APD-PV)/Documents/GitHub/PhysIO-Live/';
 pathCode        = fullfile(pathProject, 'code');
 pathResults     = fullfile(pathProject, 'results');
 pathSubject     = fullfile(pathProject, 'results', subjectId);
 
 
-
 addpath(genpath(pathCode));
 pathNow = pwd;
-
 
 cd(pathSubject);
 
@@ -48,6 +46,12 @@ mkdir('nifti')
 mkdir('glm_s3')
 mkdir('physio_out')
 
+copyfile sub-01_ses-auditoryperception_func_sub-01_ses-auditoryperception_task-auditoryperception_run-01_bold.nii nifti/bold.nii
+copyfile sub-01_ses-forrestgump_anat_sub-01_ses-forrestgump_T1w.nii nifti/T1w.nii
+
+% add SPM path
+addpath(genpath(pathSPM))
+addpath(genpath(fullfile(pathSPM, '/matlabbatch')))
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Setup SPM Batch editor
@@ -67,16 +71,14 @@ end
 %% Spatial Preproc
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 if hasStruct
-    fileJobPreproc = 'preproc_minimal_spm_job.m';
+    fileJobPreproc = 'preproc_minimal_spm_job.m'; % minimal preprocessing
 else
-    fileJobPreproc = 'preproc_minimal_no_struct_spm_job.m';
+    fileJobPreproc = 'preproc_minimal_no_struct_spm_job.m'; % use bias corrected mean of fmri.nii for viz
 end
 
 % loads matlabbatch and adapts subject-specific data
 clear matlabbatch
 run(fileJobPreproc)
-matlabbatch{1}.spm.spatial.realign.estwrite.data{1} = ...
-    cellstr(spm_select('ExtFPList', 'nifti', '^bold.*', 1:nVolumes));
 
 spm_jobman(jobMode, matlabbatch)
 
@@ -93,12 +95,11 @@ clear matlabbatch
 
 %fileJobPhysio = 'physio_spm_job.m';
 fileJobPhysio = 'physio_batch_job.m';
+
 clear matlabbatch
 run(fileJobPhysio)
-matlabbatch{1}.spm.tools.physio.scan_timing.sqpar.Nscans = nVolumes;
-matlabbatch{1}.spm.tools.physio.scan_timing.sqpar.Nslices = nSlices;
-matlabbatch{1}.spm.tools.physio.scan_timing.sqpar.TR = TR;
-matlabbatch{1}.spm.tools.physio.scan_timing.sqpar.onset_slice = nSlices/2;
+
+% potential debuggers: add matlabbatch 
 
 
 spm_jobman(jobMode, matlabbatch)
@@ -110,26 +111,14 @@ if isInteractive, input('Press Enter to continue'); end
 %% GLM with or w/o smoothing
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 if doSmooth
-    fileJobGlm = 'glm_s3_spm_smooth_job.m';
+    fileJobGlm = 'glm_s3_spm_smooth_job.m'; % smoothed images
 else
-    fileJobGlm = 'glm_spm_job.m'; % does not work yet
+    fileJobGlm = 'glm_spm_job.m'; % 
 end
 clear matlabbatch
 run(fileJobGlm)
 
-if doSmooth
-    matlabbatch{1}.spm.stats.fmri_spec.sess.scans = ...
-        cellstr(spm_select('ExtFPList', 'nifti', '^srbold.*', 1:nVolumes));
-else
-    matlabbatch{1}.spm.stats.fmri_spec.sess.scans = ...
-        cellstr(spm_select('ExtFPList', 'nifti', '^rfmri.*', 1:nVolumes));
-end
-
-matlabbatch{1}.spm.stats.fmri_spec.timing.fmri_t = nSlices;
-matlabbatch{1}.spm.stats.fmri_spec.timing.RT = TR;
-matlabbatch{1}.spm.stats.fmri_spec.timing.fmri_t0 = nSlices/2;
 
 spm_jobman(jobMode, matlabbatch)
 

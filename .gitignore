@@ -6,3 +6,13 @@ data*
 physio_spm_job.m # Lars
 preproc_spm_job.m # Lars
 no_track
+settings.json
+.gitignore
+sub-01_ses-auditoryperception_func_sub-01_ses-auditoryperception_task-auditoryperception_run-01_bold.nii
+sub-01_ses-forrestgump_anat_sub-01_ses-forrestgump_T1w.nii
+glm
+glm_s3
+nifti
+physio_out
+*.asv
+*.ps
