@@ -24,7 +24,7 @@ Here is where the future PhysIO Matlab Livescript demo lives.
    - sub-01/ses-forestgump/anat/sub-01_ses-forrestgump_T1w.nii.gz (unpack)
    - sub-01_ses-auditoryperception_func_sub-01_ses-auditoryperception_task-auditoryperception_run-01_physio.tsv
    - recording-cardresp_physio.json
-3. Adapt the environment variables  in main.m
+3. Adapt the environment variables  in main.mlx
 
 ## Debugging - common issues
 
