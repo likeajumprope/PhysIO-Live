@@ -12,9 +12,9 @@ Here is where the future PhysIO Matlab Livescript demo lives.
 
 ### For the second option, follow the steps below:
 
-1. Clone this repository *recursively*. This way, all dependent libraries, e.g., [SPM](https://www.fil.ion.ucl.ac.uk/spm/) and [TAPAS PhysIO][SPM](https://www.fil.ion.ucl.ac.uk/spm/) are automatically installed as well.
+1. Clone this repository *recursively*. This way, all dependent libraries, e.g., [SPM](https://www.fil.ion.ucl.ac.uk/spm/) and [TAPAS PhysIO](https://www.nitrc.org/projects/physio/) are automatically installed as well.
     ```
-    git clone --recursive https://github.com/likeajumprope/PhysIO-Live"
+    git clone --recursive https://github.com/likeajumprope/PhysIO-Live
     ```
    - *Note:* Check that the `libs` subfolder is not empty, and e.g,. `libs/tapas` contains files.
 2. Get the data. 
