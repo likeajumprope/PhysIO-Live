@@ -1,5 +1,6 @@
 # PhysIO-Live
-This repository contains a Live-Script demo of the [PhysIO toolbox](https://www.fil.ion.ucl.ac.uk/spm/) for physiological (cardiac and respiratory) noise modelling and correction of fmri data. 
+
+ This repository contains a Live-Script demo of the [PhysIO toolbox](https://www.fil.ion.ucl.ac.uk/spm/) for physiological (cardiac and respiratory) noise modelling and correction of fmri data. 
 
 
 ## How to work with this repository
@@ -16,9 +17,10 @@ This repository contains a Live-Script demo of the [PhysIO toolbox](https://www.
 ### To clone this repository and run it locally on your machine:
 
 #### 1. Clone this repository *recursively*. This way, all dependent libraries, e.g., [SPM](https://www.fil.ion.ucl.ac.uk/spm/) and [TAPAS PhysIO]([https://www.nitrc.org/projects/physio/](https://www.tnu.ethz.ch/en/software/tapas/documentations/physio-toolbox) are automatically installed as well.
-    ```
-    git clone --recursive https://github.com/likeajumprope/PhysIO-Live
-    ```
+    
+ ```
+ git clone --recursive https://github.com/likeajumprope/PhysIO-Live
+ ```
    - *Note:* Check that the `libs` subfolder is not empty, and e.g,. `libs/tapas` contains files.
 
 
@@ -31,7 +33,8 @@ This repository contains a Live-Script demo of the [PhysIO toolbox](https://www.
    - recording-cardresp_physio.json
 
 
-#### 3. Adapt the environment variables  in main.mlx (matlab version > 2019a) or main.m
+#### 3. Adapt the environment variables in main.mlx (matlab version > 2019a) or in main.m
+The two files main.mlx and main.m are identical and ensure the usability of this tutorial for matlab versions that do not support .mlx files.
 
 ## Debugging - common issues
 
