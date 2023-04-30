@@ -14,14 +14,14 @@ Here is where the future PhysIO Matlab Livescript demo lives.
 
 ### For the second option, follow the steps below:
 
-1. Clone this repository *recursively*. This way, all dependent libraries, e.g., [SPM](https://www.fil.ion.ucl.ac.uk/spm/) and [TAPAS PhysIO](https://www.nitrc.org/projects/physio/) are automatically installed as well.
+#### 1. Clone this repository *recursively*. This way, all dependent libraries, e.g., [SPM](https://www.fil.ion.ucl.ac.uk/spm/) and [TAPAS PhysIO](https://www.nitrc.org/projects/physio/) are automatically installed as well.
     ```
     git clone --recursive https://github.com/likeajumprope/PhysIO-Live
     ```
    - *Note:* Check that the `libs` subfolder is not empty, and e.g,. `libs/tapas` contains files.
 
 
-2. Get the data. 
+#### 2. Get the data. 
    For this live demo, we use the [Forrest Gump](https://openneuro.org/datasets/ds000113/versions/1.3.0) data set. Here we use the audio perception sub data set (see also [here](https://www.studyforrest.org/data.html))
    The following files need to be downloaded into the sub-01 folder:
    - sub-01/ses-audiotoryperception/func/sub-01_ses-auditoryperception_task-auditoryperception_run-01_bold.nii.gz (unpack)
@@ -30,7 +30,7 @@ Here is where the future PhysIO Matlab Livescript demo lives.
    - recording-cardresp_physio.json
 
 
-3. Adapt the environment variables  in main.mlx
+#### 3. Adapt the environment variables  in main.mlx (matlab version > 2019a) or main.m
 
 ## Debugging - common issues
 
