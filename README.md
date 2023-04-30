@@ -2,7 +2,7 @@
 
  This repository contains a Live-Script demo of the [TAPAS PhysIO toolbox](https://www.fil.ion.ucl.ac.uk/spm/) for physiological (cardiac and respiratory) noise modelling and correction of fmri data. 
 
-![Physiological noise][(https://raw.githubusercontent.com/likeajumprope/PhysIO-Live/main/img/Physio_example.png))
+![Physiological noise](https://raw.githubusercontent.com/likeajumprope/PhysIO-Live/main/img/Physio_example.png)
 
 ## How to work with this repository
 
