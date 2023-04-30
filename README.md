@@ -4,6 +4,8 @@
 
 ![Physiological noise](/img/Physio_example.png)
 
+</br>
+
 ## How to work with this repository
 
 ### There are three ways to work with this repository:
@@ -23,7 +25,7 @@
  git clone --recursive https://github.com/likeajumprope/PhysIO-Live
  ```
    - *Note:* Check that the `libs` subfolder is not empty, and e.g,. `libs/tapas` contains files.
-
+</br>
 
 #### 2. Get the data. 
    For this live demo, we use the [Forrest Gump](https://openneuro.org/datasets/ds000113/versions/1.3.0) data set. Here we use the audio perception sub data set (see also [here](https://www.studyforrest.org/data.html))
@@ -33,9 +35,18 @@
    - sub-01_ses-auditoryperception_func_sub-01_ses-auditoryperception_task-auditoryperception_run-01_physio.tsv
    - recording-cardresp_physio.json
 
+Your folder structure should look like the following:
+
+<p align="center">
+  <img width="500"  src="/img/Folder_structure.png">
+</p>
+</br>
+
 
 #### 3. Adapt the environment variables in main.mlx (matlab version > 2019a) or in main.m
 The two files main.mlx and main.m are identical and ensure the usability of this tutorial for matlab versions that do not support .mlx files.
+
+</br>
 
 ## Debugging - common issues
 
