@@ -1,20 +1,21 @@
 # PhysIO-Live
-Here is where the future PhysIO Matlab Livescript demo lives.
+This repository contains a Live-Script demo of the [PhysIO toolbox](https://www.fil.ion.ucl.ac.uk/spm/) for physiological (cardiac and respiratory) noise modelling and correction of fmri data. 
+
 
 ## How to work with this repository
 
 ### There are three ways to work with this repository:
 
 
-- [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=likeajumprope/PhysIO-Live&file=main.mlx)
+- Run online [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=likeajumprope/PhysIO-Live&file=main.mlx)
 
 - Run locally on your machine
 
 - View on [![View PhysIO-Live on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://au.mathworks.com/matlabcentral/fileexchange/128779-physio-live)
 
-### For the second option, follow the steps below:
+### To clone this repository and run it locally on your machine:
 
-#### 1. Clone this repository *recursively*. This way, all dependent libraries, e.g., [SPM](https://www.fil.ion.ucl.ac.uk/spm/) and [TAPAS PhysIO](https://www.nitrc.org/projects/physio/) are automatically installed as well.
+#### 1. Clone this repository *recursively*. This way, all dependent libraries, e.g., [SPM](https://www.fil.ion.ucl.ac.uk/spm/) and [TAPAS PhysIO]([https://www.nitrc.org/projects/physio/](https://www.tnu.ethz.ch/en/software/tapas/documentations/physio-toolbox) are automatically installed as well.
     ```
     git clone --recursive https://github.com/likeajumprope/PhysIO-Live
     ```
