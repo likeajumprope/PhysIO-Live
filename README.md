@@ -54,4 +54,9 @@ The two files main.mlx and main.m are identical and ensure the usability of this
 - Make sure tapas, spm/matlabbatch are on the path. Any "cannot find/open file" error is usually due to the relevant folder not being  on the path.
 - Some operations take some time. A wheel of doom when hovering over the batch editor indicates that the process is still running!
 
+</br>
+
+## Literature
+Find the publication on the toobox [here](https://www.sciencedirect.com/science/article/pii/S016502701630259X)
+
 (C) 2023 Johanna Bayer, supervised by Lars Kasper
