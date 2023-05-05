@@ -35,19 +35,20 @@
    - sub-01_ses-auditoryperception_func_sub-01_ses-auditoryperception_task-auditoryperception_run-01_physio.tsv
    - recording-cardresp_physio.json
    
-To make the download easier, you can also just run the file `get_files.sh` in the `misc` folder in the terminal:
+To make the download easier, you can also just open teh terminal run the file `get_files.sh` in the `misc` folder:
 
 ```
 misc my-username$ ./get_files.sh
 ```
-
-Your folder structure should look like the following:
+Move all those files into the results/sub-01 folder. Your folder structure should look like the following:
 
 <p align="center">
   <img width="500"  src="/misc/Folder_structure.png">
 </p>
 </br>
 
+Now your folders are ready to go!
+</br>
 
 #### 3. Adapt the environment variables in main.mlx (matlab version > 2019a) or in main.m
 The two files main.mlx and main.m are identical and ensure the usability of this tutorial for matlab versions that do not support .mlx files.
