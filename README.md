@@ -2,7 +2,7 @@
 
  This repository contains a Live-Script demo of the [TAPAS PhysIO toolbox](https://www.tnu.ethz.ch/en/software/tapas/documentations/physio-toolbox) for physiological (cardiac and respiratory) noise modelling and correction of fmri data. 
 
-![Physiological noise](/img/Physio_example.png)
+![Physiological noise](/misc/Physio_example.png)
 
 </br>
 
@@ -38,7 +38,7 @@
 Your folder structure should look like the following:
 
 <p align="center">
-  <img width="500"  src="/img/Folder_structure.png">
+  <img width="500"  src="/misc/Folder_structure.png">
 </p>
 </br>
 
