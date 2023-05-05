@@ -89,4 +89,4 @@ NeuroImage, 117787. https://doi.org/10.1016/j.neuroimage.2021.117787
 
 
 
-(C) 2023 Johanna Bayer, supervised by Lars Kasper
+(C) 2023 Johanna Bayer, supervised by Lars Kasper, supported by Mathworks Inc.
