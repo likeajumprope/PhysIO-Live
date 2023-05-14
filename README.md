@@ -1,6 +1,6 @@
 # PhysIO-Live
 
- This repository contains a Live-Script demo of the [TAPAS PhysIO toolbox](https://www.tnu.ethz.ch/en/software/tapas/documentations/physio-toolbox) for physiological (cardiac and respiratory) noise modelling and correction of fmri data. 
+ This repository contains a Live-Script demo of the [TAPAS PhysIO toolbox](https://github.com/translationalneuromodeling/tapas/tree/master/PhysIO) for physiological (cardiac and respiratory) noise modelling and correction of fmri data. 
 
 ![Physiological noise](/misc/Physio_example.png)
 
@@ -19,7 +19,7 @@
 
 ### To clone this repository and run it locally on your machine:
 
-#### 1. Clone this repository *recursively*. This way, all dependent libraries, e.g., [SPM](https://www.fil.ion.ucl.ac.uk/spm/) and [TAPAS PhysIO](https://www.tnu.ethz.ch/en/software/tapas/documentations/physio-toolbox) are automatically installed as well.
+#### 1. Clone this repository *recursively*. This way, all dependent libraries, e.g., [SPM](https://www.fil.ion.ucl.ac.uk/spm/) and [TAPAS PhysIO](https://github.com/translationalneuromodeling/tapas/tree/master/PhysIO) are automatically installed as well.
     
  ```
  git clone --recursive https://github.com/likeajumprope/PhysIO-Live
